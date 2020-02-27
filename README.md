@@ -1,7 +1,8 @@
 編集中
 
 # CloudflareでダイナミックDNSを利用する方法について
-![Cloudflare](https://imgur.com/Yog4TbP)
+![Cloudflare](https://i.imgur.com/Yog4TbP.png)
+<br>
 このスクリプトはCloudflareでダイナミックDNS（DDNS）を利用するために作成しました。<br>
 
 # DNSの書き換えのプロセス
@@ -23,12 +24,17 @@ Cloudflareでレコードを変更するには対象となるレコードを有�
 |Record_ID|1レコードのID（cloud_look.shで取得しなければならない）|
 |Email|Cloudflareにログインするためのメールアドレス|
 |Record_Name|変更したいレコード名（サブドメインまで含める）|
+<br>
 以上がスクリプト内ある変数の大まかな説明です。
 
 ### グローバルキー（Global_Key）
+
 ### ゾーンID（Zone_ID）
+
 ### レコードID（Record_ID）
+
 ### メールアドレス（Email）
+
 ### レコード名（Record_Name）
 
 ## レコードID（Record_ID）の取得 ※cloud_look.sh
