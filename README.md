@@ -16,6 +16,7 @@
 ## 必要な情報
 Cloudflareでレコードを変更するには対象となるレコードを有するアカウントの情報が必要です。<br>
 |変数名|概要|
+|:---|:---|
 |Global_Key|CloudflareのグローバルAPIキー|
 |Zone_ID|ドメイン毎に割り当てられているID|
 |Record_ID|1レコードのID（cloud_look.shで取得しなければならない）|
