@@ -1,6 +1,7 @@
 編集中
 
 # CloudflareでダイナミックDNSを利用する方法について
+![Cloudflare](https://imgur.com/Yog4TbP)
 このスクリプトはCloudflareでダイナミックDNS（DDNS）を利用するために作成しました。<br>
 
 # DNSの書き換えのプロセス
