@@ -28,14 +28,29 @@ Cloudflareでレコードを変更するには対象となるレコードを有�
 以上がスクリプト内ある変数の大まかな説明です。
 
 ### グローバルキー（Global_Key）
+Cloudflareにログインし、対象となるドメインを選択。<br>
+右上のアカウントアイコンからProfile→API Tokensへ移動<br>
+ページ下部にあるAPI KeysよりGlobal API Keyからキーを取得します。
+![Global Key](https://i.imgur.com/Vx0Gd50.png)
+※グローバルキーの取り扱いに十分注意してください！
 
 ### ゾーンID（Zone_ID）
+ゾーンIDの取得は対象のドメインのダッシュボードにあるOverviewのページ右下に記載されています。
+![Zone_ID](https://i.imgur.com/zRTq504.png)
 
 ### レコードID（Record_ID）
+Record_IDは本リポジトリにある`cloud_look.sh`を使用して取得する必要があります。<br>
+`cloud_look.sh`の使用方法は以下の項目で解説します。
 
 ### メールアドレス（Email）
+Cloudflareにログインするために使用しているメールアドレスです。<br>
+特に調べる必要はありません。
 
 ### レコード名（Record_Name）
+変更したいレコード名です。<br>
+注意すべき点としてドメインが`example.com`とし、変更したいドメインが`site.example.com`とサブドメインの場合は、そのサブドメイン名まですべてを指します。<br>
+今回の例では`kanagawa.xxxxx.net`として画像に表記します。
+![Record_Name](https://i.imgur.com/kCbVNV5.png)
 
 ## レコードID（Record_ID）の取得 ※cloud_look.sh
 レコードID（Record_ID）を取得するには`cloud_look.sh`を使用して取得します。<br>
@@ -49,8 +64,14 @@ Cloudflareでレコードを変更するには対象となるレコードを有�
 Global_Key="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 Zone_ID="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 Email="example@example.com"
-Record_Name="example.com"
+Record_Name="site.example.com"
 ```
+必要な記述してスクリプトを実行します。
+![Shell](https://i.imgur.com/pKbMrcS.png)
+画像の様にJSON形式でレスポンスされます。<br>
+認証に成功するとRecord_IDが記述されているJSONが出力されますので`cloudflare.sh`のRecord_IDへペーストします。
+
+## 
 
 
 # Cronを使用して定期的にCloudflareにIPアドレスを通知
