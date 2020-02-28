@@ -84,13 +84,13 @@ TTL=1
 Proxy="false"
 ```
 
-|変数名|概要|
-|:---|:---|
-|Type|レコードタイプ（A or AAA）|
-|Name|変更したいドメイン名|
-|Content|IPアドレス|
-|TTL|TTLの設定（1に設定するとautoになる）|
-|Proxy|プロキシーをオンにするか否か（true/false）|
+|変数名|値|概要|
+|:---|:---|:---|
+|Type|A|レコードタイプ（A or AAA）|
+|Name|kanagawa.xxxxxx.net|変更したいドメイン名|
+|Content|xxx.xxx.xxx.xxx|実行したクライアントのグローバルIPアドレス（IPv4）|
+|TTL|1|TTLの設定（1に設定するとautoになる）|
+|Proxy|false|プロキシーをオンにするか否か（true/false）|
 <br>
 ドメイン名を変更したい場合は以上の変数（Name）内を別に指定すると継続的にそのレコード名になります。<br>
 これでCloudflareのダッシュボードより確認してIPアドレスが変更されているか確認します。
