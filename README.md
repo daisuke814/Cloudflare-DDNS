@@ -67,11 +67,35 @@ Email="example@example.com"
 Record_Name="site.example.com"
 ```
 必要な記述してスクリプトを実行します。
-![Shell](https://i.imgur.com/pKbMrcS.png)
+![Shell](https://i.imgur.com/pKbMrcS.png)<br>
 画像の様にJSON形式でレスポンスされます。<br>
 認証に成功するとRecord_IDが記述されているJSONが出力されますので`cloudflare.sh`のRecord_IDへペーストします。
+![Shell](https://i.imgur.com/DjOj9pG.png)
 
-## 
+## Cloudflare.shを実行する
+Record_IDとその他`cloudflare.sh`を記載して実行します。<br>
+```Bash:cloudflare.sh
+##################################################################
+#   Record
+##################################################################
+
+Type="A"
+Name="example.com"
+Content=$(curl -s https://api.ipify.org)
+TTL=1
+Proxy="false"
+```
+
+|変数名|概要|
+|:---|:---|
+|Type|レコードタイプ（A or AAA）|
+|Name|変更したいドメイン名|
+|Content|IPアドレス|
+|TTL|TTLの設定（1に設定するとautoになる）|
+|Proxy|プロキシーをオンにするか否か（true/false）|
+<br>
+ドメイン名を変更したい場合は以上の変数（Name）内を別に指定すると継続的にそのレコード名になります。<br>
+これでCloudflareのダッシュボードより確認してIPアドレスが変更されているか確認します。
 
 
 # Cronを使用して定期的にCloudflareにIPアドレスを通知
