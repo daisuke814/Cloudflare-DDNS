@@ -86,7 +86,7 @@ Proxy="false"
 
 |変数名|値|概要|
 |:---|:---|:---|
-|Type|A|レコードタイプ（A or AAA）|
+|Type|A|レコードタイプ（A or AAAA）|
 |Name|kanagawa.xxxxxx.net|変更したいドメイン名|
 |Content|xxx.xxx.xxx.xxx|実行したクライアントのグローバルIPアドレス（IPv4）|
 |TTL|1|TTLの設定（1に設定するとautoになる）|
